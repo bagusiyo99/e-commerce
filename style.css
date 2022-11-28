@@ -1,0 +1,343 @@
+/* margin untuk mengukur jarak */
+/* "section-p1">(class untuk mengatur jarak) */
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+
+h4 {
+    font-size: 20px;
+    color: #222;
+}
+
+h5 {
+    font-size: 22px;
+    line-height: 24px;
+    color: #222;
+}
+
+h6 {
+    font-size: 12px;
+    font-weight: 700
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+
+body {
+    width: 100%;
+}
+
+
+/* header  */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10); (shadow bawah navbar) */
+
+    /* agar navbar mengikuti ketika kebawah */
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+
+}
+
+#navbar li {
+    /* list tidak ada */
+    list-style: none;
+    position: relative;
+    padding: 0px 20px;
+
+}
+
+#navbar li a {
+    text-decoration: none;
+    /* text-decoration: none; mengilangkan garis bawah link */
+    font-size: 15px;
+    font-weight: 700;
+    /* font-weight: 700; mempertebal font */
+    color: black;
+    transition: 0.3 ease;
+
+}
+
+/* ketika di klik ganti warna */
+/* #navbar li a.active (agar home aktif) diambil dari index.html class aktiv di home */
+#navbar li a:hover,
+#navbar li a.active {
+    color: blue;
+}
+
+/* garis bawah */
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 20%;
+    height: 3px;
+    background: blue;
+    position: absolute;
+    bottom: -5px;
+    left: 30px;
+    text-align: center;
+
+}
+
+
+/*  ###############Orang##############  */
+
+#orang {
+    padding: 0px 80px;
+    background-image: url("img/hero4.png");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    display: flex;
+    align-items: flex-start;
+    /* align-items: flex-start; (button) */
+    justify-content: center;
+    flex-direction: column;
+    ;
+}
+
+#orang h4 {
+    padding-bottom: 15px;
+    /* jarak ke bawah */
+}
+
+#orang h1 {
+    color: blue;
+}
+
+#orang button {
+    background-image: url("img/button.png");
+    background-color: transparent;
+    color: blue;
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+
+/* "section-p1">(class untuk mengatur jarak) */
+/* ###############################################PENTING################################################################### */
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0px;
+}
+
+/* ###### fitur ######## */
+#fitur {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* justify-content: space-between; (biar ada space antar fitur */
+    flex-wrap: wrap;
+    /* biar keatur */
+}
+
+#fitur .fe-box {
+    width: 180px;
+    height: 200px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid cadetblue;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+/* agar diklik muncul di box */
+#fitur .fe-box:hover {
+    box-shadow: 10px 10px 54px rgba(10, 4, 125, 0.1);
+    border: 3px solid cadetblue;
+}
+
+/* gambar */
+#fitur .fe-box img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+#fitur .fe-box h6 {
+    display: inline-block;
+    margin-top: 5px;
+    /* display: inline-block;  (agar sesuai tulisan)*/
+
+    /* padding: 0px 8px 8px 0px;   (atas,kiri,bawah,kanan */
+    padding: 8px 8px 8px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: blue;
+    background-color: #fddde4;
+}
+
+/* button agar ada warna berbeda-beda */
+#fitur .fe-box:nth-child(2) h6 {
+    background-color: #bef37a;
+}
+
+#fitur .fe-box:nth-child(3) h6 {
+    background-color: #8ebc52;
+}
+
+#fitur .fe-box:nth-child(4) h6 {
+    background-color: #d0f81c;
+}
+
+#fitur .fe-box:nth-child(5) h6 {
+    background-color: #d2a1f3;
+}
+
+#fitur .fe-box:nth-child(6) h6 {
+    background-color: #8ff5f3;
+}
+
+
+/* ############## kategori ############################ */
+#produk1 {
+    text-align: center;
+}
+
+#produk1 .pro-produk {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    flex-wrap: wrap;
+
+}
+
+#produk1 .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #9c9a9a;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(176, 38, 38, 0.03);
+    margin: 40px 0;
+    transition: 0.2s ease;
+    position: relative;
+
+}
+
+#produk1 .pro img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+#produk1 .pro .deskripsi {
+    text-align: center;
+    padding: 10px 0;
+}
+
+#produk1 .pro span {
+    color: #606063;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+#produk1 .pro .des h5 {
+    color: #1a1a1a;
+    font-size: 20 px;
+    margin: 15px;
+
+}
+
+#produk1 .pro .deskripsi i {
+    font-size: 20px;
+}
+
+#produk1 .pro .bintang {
+    color: #f6d815;
+    padding-top: 10px;
+    text-align: center;
+
+}
+
+#produk1 .pro .deskripsi h4 {
+    padding-top: 5px;
+    font-size: 30px;
+    font-weight: 800;
+    color: #8ff5f3;
+    text-align: center;
+}
+
+#produk1 .pro .fa-cart-shopping {
+
+    /* buat tombol buttom */
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+
+    /* warna tombol */
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+
+    /*  ngatur kebawah keranjang */
+    bottom: 8px;
+    /* ngatur ke kanan  */
+    right: 10px;
+}
+
+/* agar diklik muncul di box */
+#produk1 .pro:hover {
+    box-shadow: 10px 10px 54px rgba(10, 4, 125, 0.1);
+    border: 3px solid cadetblue;
+}
+
+#produk1 .btu {
+    display: inline-block;
+    margin-top: 5px;
+    /* display: inline-block;  (agar sesuai tulisan)*/
+    background-color: #088178;
+    color: white;
+    /* padding: 0px 8px 8px 0px;   (atas,kiri,bawah,kanan */
+    padding: 8px 8px 8px 8px;
+    line-height: 1;
+    border-radius: 7px;
+
+
+}
