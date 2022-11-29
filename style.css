@@ -1,7 +1,7 @@
 /* margin untuk mengukur jarak */
 /* "section-p1">(class untuk mengatur jarak) */
 /* hover itu selanjutnya dari awalan */
-
+/* padding: 0px 8px 8px 0px;   (atas,kanan,bawah,kiri)*/
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400&display=swap');
 
 * {
@@ -142,15 +142,29 @@ body {
     color: blue;
 }
 
+
+/* ######button############### */
 #orang button {
     background-image: url("img/button.png");
     background-color: transparent;
     color: blue;
     border: 0;
-    padding: 14px 80px 14px 65px;
+    /* mengatur ukuran button */
+
+    /* padding: 0px 8px 8px 0px;   (atas,kanan,bawah,kiri)*/
+    padding: 14px 50px 14px 65px;
     cursor: pointer;
     font-weight: 700;
     font-size: 15px;
+}
+
+/* ketika diklik muncul  */
+#orang button:hover {
+    background-image: url("img/button.png");
+    color: white;
+    background-color: orange;
+    border-radius: 50px;
+    /* color: warna untuk text */
 }
 
 
@@ -314,7 +328,7 @@ body {
 
     /* warna tombol */
     color: #088178;
-    border: 1px solid #cce7d0;
+    border: 1px solid #dcb406;
     position: absolute;
 
     /*  ngatur kebawah keranjang */
@@ -323,19 +337,28 @@ body {
     right: 10px;
 }
 
+
+#produk1 .pro .fa-cart-shopping {
+    background-color: orange;
+    /* color: warna untuk text */
+}
+
 /* agar diklik muncul di box */
 #produk1 .pro:hover {
     box-shadow: 10px 10px 54px rgba(10, 4, 125, 0.1);
     border: 3px solid cadetblue;
 }
 
+/* ketika diklik muncul  */
 #produk1 .btu {
     display: inline-block;
     margin-top: 5px;
     /* display: inline-block;  (agar sesuai tulisan)*/
     background-color: #088178;
     color: white;
-    /* padding: 0px 8px 8px 0px;   (atas,kiri,bawah,kanan */
+
+
+    /* padding: 0px 8px 8px 0px;   (atas,kanan,bawah,kiri)*/
     padding: 8px 8px 8px 8px;
     line-height: 1;
     border-radius: 7px;
@@ -382,13 +405,15 @@ body {
     color: orange;
 }
 
+/* ######button############### */
 #banner .btu {
     display: inline-block;
     margin-top: 5px;
     /* display: inline-block;  (agar sesuai tulisan)*/
     background-color: #088178;
     color: white;
-    /* padding: 0px 8px 8px 0px;   (atas,kiri,bawah,kanan */
+
+    /* padding: 0px 8px 8px 0px;   (atas,kanan,bawah,kiri)*/
     padding: 8px 8px 8px 8px;
     line-height: 1;
     border-radius: 7px;
@@ -398,7 +423,159 @@ body {
 
 }
 
+/* ketika diklik muncul  */
 #banner button:hover {
     background-color: orange;
     /* color: warna untuk text */
+}
+
+
+#banner2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+#banner2 .banner-nih {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("img/banner/b17.jpg");
+
+    /* ukuran banner */
+    min-width: 640px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+
+#banner2 .banner-nih2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("img/banner/b18.jpg");
+    min-width: 640px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+
+
+#banner2 h4 {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#banner2 h2 {
+    color: white;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+#banner2 span {
+    color: white;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+
+/* ######button############### */
+button.bti {
+    background-color: transparent;
+    /* padding: 0px 8px 8px 0px;   (atas,kanan,bawah,kiri)*/
+    padding: 10px 35px;
+    border: 3px solid white;
+    border-radius: 30px;
+
+    /* text */
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    outline: none;
+    transition: 0.05s;
+
+    /* jarak  */
+    margin: 15px;
+
+}
+
+/* ketika diklik muncul  */
+#banner2 button:hover {
+    background: #088178;
+    border: 3px solid #088178;
+    /* color: warna untuk text */
+}
+
+
+/* ###############BANNER 3 ###################### */
+#banner3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* padding: 0px 8px 8px 0px;   (atas,kanan,bawah,kiri)*/
+    padding: 0px 25px 8px 25px;
+
+    min-width: 40px;
+    height: 50vh;
+}
+
+/* ################### foto 3 */
+#banner3 .banner-noh {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("img/banner/b10.jpg");
+    min-width: 30px;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#banner3 .banner-noh2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("img/banner/b16.jpg");
+    min-width: 30px;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#banner3 .banner-noh3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("img/banner/b19.jpg");
+    min-width: 30px;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#banner3 h2 {
+    color: white;
+    font-weight: 800;
+    font-size: 25px;
+}
+
+#banner3 h3 {
+    color: white;
+    font-weight: 800;
+    font-size: 25px;
 }
