@@ -75,6 +75,21 @@ body {
 
 }
 
+
+/* Navbar khusus mobile */
+#mobile {
+    display: none;
+    align-items: center;
+}
+
+#close {
+    display: none;
+}
+
+/* akhir Navbar khusus mobile */
+
+
+
 #navbar li {
     /* list tidak ada */
     list-style: none;
@@ -98,7 +113,7 @@ body {
 /* #navbar li a.active (agar home aktif) diambil dari index.html class aktiv di home */
 #navbar li a:hover,
 #navbar li a.active {
-    color: blue;
+    color: orange;
 }
 
 /* garis bawah */
@@ -107,7 +122,7 @@ body {
     content: "";
     width: 20%;
     height: 3px;
-    background: blue;
+    background: orange;
     position: absolute;
     bottom: -5px;
     left: 30px;
@@ -120,11 +135,11 @@ body {
 
 #orang {
     padding: 0px 80px;
-    background-image: url("img/hero4.png");
+    background-image: url("img/ba.png");
     height: 90vh;
     width: 100%;
     background-size: cover;
-    background-position: top 25% right 0;
+    background-position: top 75% right 0;
     display: flex;
     align-items: flex-start;
     /* align-items: flex-start; (button) */
@@ -134,20 +149,22 @@ body {
 }
 
 #orang h4 {
+
     padding-bottom: 15px;
     /* jarak ke bawah */
 }
 
 #orang h1 {
-    color: blue;
+    color: #088178;
 }
 
 
 /* ######button############### */
 #orang button {
-    background-image: url("img/button.png");
-    background-color: transparent;
-    color: blue;
+    /* background-image: url("img/button.png"); (jika ingin memakai gambar
+    background-color: transparent; */
+    background-color: #088178;
+    color: white;
     border: 0;
     /* mengatur ukuran button */
 
@@ -156,6 +173,7 @@ body {
     cursor: pointer;
     font-weight: 700;
     font-size: 15px;
+    border-radius: 50px;
 }
 
 /* ketika diklik muncul  */
@@ -646,4 +664,171 @@ button.bti {
     background: #088178;
     border: 3px solid #088178;
     /* color: warna untuk text */
+}
+
+
+/* #################FOOTER####################################################### */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+
+}
+
+footer .logoo {
+    margin-bottom: 50px;
+}
+
+footer h4 {
+    font-size: 17px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+footer .follow {
+    margin-top: 20px;
+}
+
+footer .follow i {
+    padding-right: 4px;
+    cursor: pointer;
+    color: #088178;
+}
+
+footer .install .row img {
+    border: 1px solid blue;
+}
+
+footer .install img {
+    margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover,
+footer a:hover {
+    color: rgb(6, 72, 164);
+}
+
+.hakcipta {
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 50px;
+    font-size: 55px;
+    background-color: #1a1a1a;
+
+}
+
+.hakcipta p {
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+/* ##################    UNTUK MENGATUR HP #################################################################################################################### */
+@media (max-width:770px) {
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        /*      flex-direction: column; (biar satu baris) */
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0px;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+
+        /* ngatur bacground */
+        background-color: #088178;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+
+        transition: 0.3s;
+    }
+
+
+    #navbar.active {
+        right: 0;
+    }
+
+    #navbar li {
+        color: white;
+        margin-bottom: 25px;
+    }
+
+    #navbar li a {
+
+        color: white;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile i {
+        color: black;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #close {
+        /* agar muncul di mobile namun tidak muncul di web ( display: none;) berada css khusus web nomor 85 */
+        display: inline-block;
+
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: rgb(252, 246, 246);
+        font-size: 24px;
+
+    }
+
+    #lg-bag {
+        display: none;
+    }
+
+    #orang {
+        height: 70vh;
+
+        /* font */
+        padding: 0 20px;
+
+        /* background pizza */
+        background-position: top 4% right 45%;
+    }
+
+
+    #fitur .fe-box {
+        justify-content: center;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
